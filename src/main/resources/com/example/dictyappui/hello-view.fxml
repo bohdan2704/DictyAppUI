@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictyappui.Controller">
+   <children>
+      <AnchorPane prefHeight="500.0" prefWidth="800.0">
+         <children>
+            <Button fx:id="btnGetWordOfTheDay" graphicTextGap="2.0" layoutX="290.0" layoutY="61.0" minWidth="33.0" mnemonicParsing="false" onAction="#getWordOfTheDay" prefHeight="30.0" prefWidth="33.0" text="?" />
+            <Button fx:id="btnTranslate" layoutX="178.0" layoutY="413.0" mnemonicParsing="false" onAction="#translate" text="Translate" />
+            <TextField fx:id="textFieldWithWord" layoutX="62.0" layoutY="64.0" />
+            <ScrollPane layoutX="401.0" layoutY="58.0" prefHeight="422.0" prefWidth="354.0">
+               <content>
+                  <Text fx:id="labelWithTranslation" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="342.783132314682">
+                     <font>
+                        <Font name="Roboto" size="18.0" />
+                     </font>
+                  </Text>
+               </content>
+            </ScrollPane>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="43.0" stroke="BLACK" strokeType="INSIDE" width="800.0" />
+            <Button layoutX="15.0" layoutY="5.0" mnemonicParsing="false" onAction="#switchToVocabulary" prefHeight="30.0" prefWidth="100.0" text="Button" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

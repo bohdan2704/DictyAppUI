@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictyappui.ControllerVocabulary">
+   <children>
+      <AnchorPane prefHeight="500.0" prefWidth="800.0">
+         <children>
+            <ScrollPane layoutX="18.0" layoutY="58.0" prefHeight="422.0" prefWidth="757.0">
+               <content>
+                  <Text fx:id="labelWithTranslation" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="342.783132314682">
+                     <font>
+                        <Font name="Roboto" size="18.0" />
+                     </font>
+                  </Text>
+               </content>
+            </ScrollPane>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="43.0" stroke="BLACK" strokeType="INSIDE" width="800.0" />
+            <Button layoutX="15.0" layoutY="5.0" mnemonicParsing="false" onAction="#switchToTranslate" prefHeight="30.0" prefWidth="100.0" text="Button" textFill="WHITE" />
+            <ChoiceBox layoutX="136.0" layoutY="9.0" prefWidth="150.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

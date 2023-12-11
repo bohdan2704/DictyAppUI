@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+/* Apply Roboto font to all text elements */
+* {
+    -fx-font-family: 'Roboto', sans-serif;
+}
+
+/* Add some styles to the VBox */
+VBox {
+    -fx-background-color: #f0f0f0; /* Light gray background */
+}
+
+/* Style the AnchorPane */
+AnchorPane {
+    -fx-background-color: #ffffff; /* White background */
+}
+
+/* Style the buttons */
+Button {
+    -fx-background-color: #4CAF50; /* Green background */
+    -fx-text-fill: white; /* White text color */
+    -fx-font-size: 14px;
+    -fx-padding: 5px 10px;
+}
+
+/* Style the TextField */
+TextField {
+    -fx-background-color: #ffffff; /* White background */
+    -fx-border-color: #ccc; /* Light gray border */
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-pref-width: 200px;
+}
+
+/* Style the ScrollPane */
+ScrollPane {
+    -fx-background-color: #ffffff; /* White background */
+    -fx-border-color: #ccc; /* Light gray border */
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+}
+
+/* Style the Text inside the ScrollPane */
+Text {
+    -fx-fill: #333; /* Dark gray text color */
+    -fx-font-size: 16px;
+    -fx-padding: 10px;
+}
