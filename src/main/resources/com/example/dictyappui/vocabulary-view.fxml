@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
@@ -23,8 +23,8 @@
                </content>
             </ScrollPane>
             <Rectangle arcHeight="5.0" arcWidth="5.0" height="43.0" stroke="BLACK" strokeType="INSIDE" width="800.0" />
-            <Button layoutX="15.0" layoutY="5.0" mnemonicParsing="false" onAction="#switchToTranslate" prefHeight="30.0" prefWidth="100.0" text="Button" textFill="WHITE" />
-            <ChoiceBox layoutX="136.0" layoutY="9.0" prefWidth="150.0" />
+            <Button layoutX="15.0" layoutY="5.0" mnemonicParsing="false" onAction="#switchToTranslate" prefHeight="30.0" prefWidth="100.0" text="Translator" textFill="WHITE" />
+            <ComboBox fx:id="alphabetComboBox" layoutX="136.0" layoutY="9.0" prefWidth="150.0" />
          </children>
       </AnchorPane>
    </children>

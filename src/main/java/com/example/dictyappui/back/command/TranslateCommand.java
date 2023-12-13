@@ -42,6 +42,7 @@ public class TranslateCommand implements Command {
         }
     }
 
+    @Override
     public String gui(DatabaseConnection dbConn, String wordToTranslate) {
         StringBuilder b = new StringBuilder();
 

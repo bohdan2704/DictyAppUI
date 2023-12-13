@@ -71,6 +71,11 @@
             <groupId>com.google.cloud</groupId>
             <artifactId>google-cloud-translate</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>30.1-jre</version> <!-- Use the latest version available -->
+        </dependency>
 
     </dependencies>
 

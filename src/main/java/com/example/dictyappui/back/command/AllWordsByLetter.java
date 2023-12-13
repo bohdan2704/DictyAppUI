@@ -34,7 +34,7 @@ public class AllWordsByLetter implements Command {
         StringBuilder b = new StringBuilder();
         List<Word> wordWithSameStartingLetter = dbConn.selectWordsStartingWithLetter(ourLetter);
         for (Word word : wordWithSameStartingLetter) {
-            b.append(word.getWords());
+            b.append(word.getWords()).append(System.lineSeparator());
         }
         return b.toString();
     }

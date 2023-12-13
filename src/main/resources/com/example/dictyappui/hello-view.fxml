@@ -18,7 +18,7 @@
             <TextField fx:id="textFieldWithWord" layoutX="62.0" layoutY="64.0" />
             <ScrollPane layoutX="401.0" layoutY="58.0" prefHeight="422.0" prefWidth="354.0">
                <content>
-                  <Text fx:id="labelWithTranslation" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="342.783132314682">
+                  <Text fx:id="labelWithTranslation" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="319.5830590724945">
                      <font>
                         <Font name="Roboto" size="18.0" />
                      </font>
@@ -26,7 +26,7 @@
                </content>
             </ScrollPane>
             <Rectangle arcHeight="5.0" arcWidth="5.0" height="43.0" stroke="BLACK" strokeType="INSIDE" width="800.0" />
-            <Button layoutX="15.0" layoutY="5.0" mnemonicParsing="false" onAction="#switchToVocabulary" prefHeight="30.0" prefWidth="100.0" text="Button" textFill="WHITE" />
+            <Button layoutX="15.0" layoutY="5.0" mnemonicParsing="false" onAction="#switchToVocabulary" prefHeight="30.0" prefWidth="100.0" text="Vocabulary" textFill="WHITE" />
          </children>
       </AnchorPane>
    </children>

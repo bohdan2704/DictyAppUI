@@ -4,6 +4,7 @@ module com.example.dictyappui {
     requires java.sql;
     requires org.jsoup;
     requires google.cloud.translate;
+    requires com.google.common;
 
 
     opens com.example.dictyappui to javafx.fxml;

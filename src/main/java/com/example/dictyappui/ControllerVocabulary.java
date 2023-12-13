@@ -14,6 +14,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -28,13 +29,7 @@ public class ControllerVocabulary implements Initializable {
     @FXML
     private Text labelWithTranslation;
     @FXML
-    private TextField textFieldWithWord;
-    @FXML
-    private Button btnTranslate;
-    @FXML
-    private Button btnGetWordOfTheDay;
-    @FXML
-    private ChoiceBox<String> alphabetChoiceBox;
+    private ComboBox<String> alphabetComboBox;
     private final DatabaseConnection databaseConnection = new DatabaseConnection(hashTableSize);
 
     public void switchToTranslate(ActionEvent event) throws IOException {
@@ -56,14 +51,19 @@ public class ControllerVocabulary implements Initializable {
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         String[] choices = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z".split(" ");
-        alphabetChoiceBox.getItems().addAll(choices);
-        alphabetChoiceBox.setOnAction(this::itemOfChoiceBoxWasSelected);
+        for (int i = 0; i < choices.length; i++) {
+            choices[i] = "Letter " + choices[i];
+        }
+        alphabetComboBox.getItems().addAll(choices);
+        alphabetComboBox.setOnAction(this::itemOfChoiceBoxWasSelected);
 
     }
 
     private void itemOfChoiceBoxWasSelected(ActionEvent event) {
-        String chosenLetter = alphabetChoiceBox.getValue();
+        final int indexOfLetterInString = 1;
+        String chosenLetter = alphabetComboBox.getValue().split(" ")[indexOfLetterInString];
         Command allWordsByLetter = new AllWordsByLetter();
-        allWordsByLetter.gui(databaseConnection, null);
+        String listOfWordsWithShortTranslation = allWordsByLetter.gui(databaseConnection, chosenLetter);
+        labelWithTranslation.setText(listOfWordsWithShortTranslation);
     }
 }

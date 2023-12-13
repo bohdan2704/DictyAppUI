@@ -1,9 +1,12 @@
-package com.example.dictyappui.back.hashing;
+package com.example.dictyappui.back.hashing.robin;
 
 import com.example.dictyappui.back.db.DatabaseConnection;
 import com.example.dictyappui.back.db.Word;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class HashTableManager {
     private final HashManager hashing;

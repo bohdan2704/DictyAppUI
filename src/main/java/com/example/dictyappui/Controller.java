@@ -35,13 +35,13 @@ public class Controller {
 
     public void translate() {
         String wordToTranslate = textFieldWithWord.getText();
-        Command command = new TranslateCommand();
+        TranslateCommand command = new TranslateCommand();
         String resultOfTranslatingTheWord = command.gui(databaseConnection, wordToTranslate);
         labelWithTranslation.setText(resultOfTranslatingTheWord);
     }
 
     public void getWordOfTheDay() {
-        Command command = new WordOfTheDayCommand();
+        WordOfTheDayCommand command = new WordOfTheDayCommand();
         String wordOfTheDay = command.gui(databaseConnection, null);
         labelWithTranslation.setText(wordOfTheDay);
     }

@@ -5,15 +5,25 @@ import com.example.dictyappui.back.command.Command;
 import com.example.dictyappui.back.command.TranslateCommand;
 import com.example.dictyappui.back.command.WordOfTheDayCommand;
 import com.example.dictyappui.back.db.DatabaseConnection;
+import com.example.dictyappui.back.hashing.HashTableManager;
+import com.example.dictyappui.back.redundant.Timer;
 
+import java.sql.Time;
 import java.util.Scanner;
 
 public class Menu {
-    private static final int hashTableSize = 37501; // 30323
+    private static final int hashTableSize = 30323; //  37501
     private Command command;
     private final DatabaseConnection dbConn = new DatabaseConnection(hashTableSize);
 
     public void start() {
+
+        Timer timer = new Timer();
+        timer.startTimer();
+        HashTableManager hashTableManager = new HashTableManager(dbConn);
+        hashTableManager.fillHashTable();
+        timer.stopTimer();
+
         System.out.println("List of commands:\n -- /tran\n -- /day\n -- /letter\n -- /exit");
         while (true) {
             Scanner scanner = new Scanner(System.in);
