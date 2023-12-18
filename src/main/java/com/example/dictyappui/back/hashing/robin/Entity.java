@@ -2,14 +2,16 @@ package com.example.dictyappui.back.hashing.robin;
 
 public class Entity {
     private int id;
+    private int probeLength;
     private String key;
     private String value;
-    private int probeLength;
+    private String description;
 
-    public Entity(String key, String value) {
+    public Entity(String key, String value, String description) {
+        this.probeLength = 0;
         this.key = key;
         this.value = value;
-        this.probeLength = 0;
+        this.description = description;
     }
 
 

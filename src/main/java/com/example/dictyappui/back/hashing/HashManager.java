@@ -25,22 +25,22 @@ public class HashManager {
 //        Old hashing algo
     }
 
+    public int hashMultiplicative(String key) {
+        int hash = 5381; // Staring value
+        final int m = 33;
+
+        for (int i = 0; i < key.length(); ++i) {
+            hash = m * hash + key.charAt(i);
+        }
+
+        return Math.abs(hash) % tableSize;
+    }
+
     public int googleHash(String str) {
         int hashValue = Hashing.murmur3_32().hashString(str, StandardCharsets.US_ASCII).asInt();
         return Math.abs((int) hashValue) % tableSize;
     }
 
-
-    public int primaryHashingWith31(String word) {
-        int intHash = 0;
-        int prime = 31; // A common prime number used in hashing
-
-        for (int i = 0; i < word.length(); i++) {
-            intHash = (intHash * prime) + word.charAt(i);
-        }
-
-        return Math.abs(intHash) % tableSize;
-    }
 
     public int primaryHashingWithPow(String word) {
         int intHash = 0;
@@ -57,9 +57,6 @@ public class HashManager {
     }
 
     public int secondaryHashingNN1(int intHash) {
-//        if (1 + intHash % (tableSize - 1) < 0) {
-//            System.out.println("Overflow " + intHash);
-//        }
         return 1 + intHash % (tableSize - 1);
     }
 

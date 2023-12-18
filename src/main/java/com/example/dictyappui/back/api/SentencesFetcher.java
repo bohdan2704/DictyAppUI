@@ -105,7 +105,6 @@ public class SentencesFetcher {
                 }
             } catch (RuntimeException e) {
                 // This word is absent in dictionary
-                System.out.println("!!!!!!!!!!!!!!!!!!");
                 System.out.println(enWords.get(i));
             }
         }

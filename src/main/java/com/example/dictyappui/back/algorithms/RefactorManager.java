@@ -4,8 +4,6 @@ import com.example.dictyappui.back.db.DatabaseConnection;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 public class RefactorManager {
     private final List<String> words = new ArrayList<>();
@@ -14,16 +12,29 @@ public class RefactorManager {
         dbConn.selectFromWordsForHashTable(words, null, null);
     }
 
-    public static List<Integer> findMinValues(List<Integer> list) {
-        // DO BETTER
+    public List<Integer> findMinValues(List<Integer> list) {
+        // Check if the list is empty
+        if (list == null || list.isEmpty()) {
+            throw new IllegalArgumentException("Input list is empty");
+        }
+
         // Find the minimum value
-        int minValue = list.stream().mapToInt(Integer::intValue).min().orElseThrow();
+        int minValue = Integer.MAX_VALUE;
+        for (int value : list) {
+            if (value < minValue) {
+                minValue = value;
+            }
+        }
 
         // Collect all indices with the minimum value
-        return IntStream.range(0, list.size())
-                .filter(i -> list.get(i) == minValue)
-                .boxed()
-                .collect(Collectors.toList());
+        List<Integer> minIndices = new ArrayList<>();
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i) == minValue) {
+                minIndices.add(i);
+            }
+        }
+
+        return minIndices;
     }
 
     public List<String> findMostSimilar(String term) {

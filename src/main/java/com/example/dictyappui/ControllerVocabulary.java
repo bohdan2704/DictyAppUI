@@ -2,8 +2,6 @@ package com.example.dictyappui;
 
 import com.example.dictyappui.back.command.AllWordsByLetter;
 import com.example.dictyappui.back.command.Command;
-import com.example.dictyappui.back.command.TranslateCommand;
-import com.example.dictyappui.back.command.WordOfTheDayCommand;
 import com.example.dictyappui.back.db.DatabaseConnection;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -12,10 +10,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
